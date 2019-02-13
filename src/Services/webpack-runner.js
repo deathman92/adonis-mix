@@ -4,13 +4,13 @@ const { join } = require('path')
 const webpack = require('webpack')
 const WebpackDevServer = require('webpack-dev-server')
 
-module.exports = async (appRoot, { prod, watch, hot }) => {
+module.exports = async (appRoot, { prod: production, watch, hot }) => {
   const webpackConfig = {
     ...require(join(
       appRoot,
       'node_modules/laravel-mix/setup/webpack.config.js'
     )),
-    mode: prod ? 'production' : 'development',
+    mode: production ? 'production' : 'development',
     watch: !!watch
   }
   const compiler = webpack(webpackConfig)

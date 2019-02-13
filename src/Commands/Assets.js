@@ -7,7 +7,7 @@ class Assets extends Command {
   static get signature() {
     return `
       assets
-      { --prod : Build assets for production }
+      { --production : Build assets for production }
       { --watch : Watch files to rebuild them on change }
       { --hot : Watch files with hot reloading enabled }
     `
@@ -17,8 +17,8 @@ class Assets extends Command {
     return 'Build assets using Webpack'
   }
 
-  async handle(_, { prod, watch, hot }) {
-    await webpackRunner(use('Helpers').appRoot(), { prod, watch, hot })
+  async handle(_, { production, watch, hot }) {
+    await webpackRunner(use('Helpers').appRoot(), { production, watch, hot })
   }
 }
 
