@@ -1,4 +1,7 @@
 # adonis-mix
+> Laravel Mix for AdonisJS
+
+![NPM Badge](https://img.shields.io/npm/v/adonis-mix.svg?style=flat-square)
 
 Adonis Mix is assets bundler your AdonisJs application.
 
