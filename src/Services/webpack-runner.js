@@ -4,7 +4,7 @@ const { join } = require('path')
 const webpack = require('webpack')
 const WebpackDevServer = require('webpack-dev-server')
 
-module.exports = async (appRoot, { prod: production, watch, hot }) => {
+module.exports = async (appRoot, { production, watch, hot }) => {
   const webpackConfig = {
     ...require(join(
       appRoot,
