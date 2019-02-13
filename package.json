@@ -1,0 +1,30 @@
+{
+  "name": "adonis-mix",
+  "version": "1.0.0",
+  "description": "AdonisJs assets pipeline with Laravel Mix",
+  "main": "index.js",
+  "keywords": [
+    "adonisjs",
+    "adonis-framework",
+    "assets",
+    "webpack",
+    "mix",
+    "laravel-mix"
+  ],
+  "author": "Deathman92 <deathman2292@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deathman92/adonis-mix"
+  },
+  "bugs": {
+    "url": "https://github.com/deathman92/adonis-mix/issues"
+  },
+  "devDependencies": {
+    "@adonisjs/ace": "^5.0.8",
+    "@adonisjs/fold": "^4.0.9"
+  },
+  "dependencies": {
+    "laravel-mix": "^4.0.14"
+  }
+}
