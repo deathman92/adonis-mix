@@ -5,14 +5,10 @@ const webpack = require('webpack')
 const WebpackDevServer = require('webpack-dev-server')
 
 module.exports = async (appRoot, { production, watch, hot }) => {
-  const webpackConfig = {
-    ...require(join(
-      appRoot,
-      'node_modules/laravel-mix/setup/webpack.config.js'
-    )),
-    mode: production ? 'production' : 'development',
-    watch: !!watch
-  }
+  const webpackConfig = require(join(
+    appRoot,
+    'node_modules/laravel-mix/setup/webpack.config.js'
+  ))
   const compiler = webpack(webpackConfig)
   const statsConfig = {
     colors: true,
@@ -24,6 +20,7 @@ module.exports = async (appRoot, { production, watch, hot }) => {
   }
   try {
     if (!hot) {
+      process.env.NODE_ENV = production ? 'production' : 'development'
       const stats = await (watch ? getWatchPromise : getRunPromise)(compiler)
       console.log(stats.toString(statsConfig))
     } else {
