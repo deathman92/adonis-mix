@@ -1,6 +1,6 @@
 {
   "name": "adonis-mix",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "AdonisJs assets pipeline with Laravel Mix",
   "main": "index.js",
   "keywords": [

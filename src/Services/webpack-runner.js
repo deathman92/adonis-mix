@@ -5,6 +5,7 @@ const webpack = require('webpack')
 const WebpackDevServer = require('webpack-dev-server')
 
 module.exports = async (appRoot, { production, watch, hot }) => {
+  process.env.NODE_ENV = production ? 'production' : 'development'
   const webpackConfig = require(join(
     appRoot,
     'node_modules/laravel-mix/setup/webpack.config.js'
@@ -20,7 +21,6 @@ module.exports = async (appRoot, { production, watch, hot }) => {
   }
   try {
     if (!hot) {
-      process.env.NODE_ENV = production ? 'production' : 'development'
       const stats = await (watch ? getWatchPromise : getRunPromise)(compiler)
       console.log(stats.toString(statsConfig))
     } else {
