@@ -34,8 +34,7 @@ After creating your assets in the way you want (Less, SCSS, Stylus, ES2015, ...)
 ```shell
 $ adonis assets
 # adonis assets --watch -> Watch for change
-# adonis assets --hot -> To run in hot reloading mode
-# adonis assets --prod -> Minify
+# adonis assets --prod -> Minify for production
 ```
 
 Laravel Mix will automaticaly download packages you need to compiles your assets and will then run them.
@@ -57,6 +56,28 @@ mix
 ```
 
 Add these to `webpack.mix.js` file in project's root.
+
+## Hot Module Replacement
+
+Read [Laravel Mix instructions](https://laravel-mix.com/docs/4.0/hot-module-replacement) about HMR.
+
+You can add script to your `package.json`
+
+```json
+...
+"scripts": {
+  ...
+  "hot": "webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js"
+  ...
+}
+...
+```
+
+And run dev server with
+
+```shell
+npm run hot
+```
 
 ## View Helper
 
