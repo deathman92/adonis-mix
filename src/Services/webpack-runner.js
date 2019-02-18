@@ -4,14 +4,18 @@ const { join } = require('path')
 const webpack = require('webpack')
 
 module.exports = async (appRoot, { production, watch }) => {
-  process.env.NODE_ENV = process.env.NODE_ENV || production ? 'production' : 'development'
+  process.env.NODE_ENV =
+    process.env.NODE_ENV || (production ? 'production' : 'development')
   const webpackConfig = require(join(
     appRoot,
     'node_modules/laravel-mix/setup/webpack.config.js'
   ))
   const compiler = webpack(webpackConfig)
   try {
-    const stats = await (watch ? getWatchPromise : getRunPromise)(compiler, webpackConfig)
+    const stats = await (watch ? getWatchPromise : getRunPromise)(
+      compiler,
+      webpackConfig
+    )
     console.log(stats.toString(webpackConfig.stats))
   } catch (error) {
     console.error(error)
