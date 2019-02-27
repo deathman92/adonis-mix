@@ -6,6 +6,9 @@ const webpack = require('webpack')
 module.exports = async (appRoot, { production, watch }) => {
   process.env.NODE_ENV =
     process.env.NODE_ENV || (production ? 'production' : 'development')
+  if (production && process.env.NODE_ENV === 'development') {
+    process.env.NODE_ENV = 'production'
+  }
   const webpackConfig = require(join(
     appRoot,
     'node_modules/laravel-mix/setup/webpack.config.js'
