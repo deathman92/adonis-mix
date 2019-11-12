@@ -34,7 +34,7 @@ After creating your assets in the way you want (Less, SCSS, Stylus, ES2015, ...)
 ```shell
 $ adonis assets
 # adonis assets --watch -> Watch for change
-# adonis assets --prod -> Minify for production
+# adonis assets --production -> Minify for production
 ```
 
 Laravel Mix will automaticaly download packages you need to compiles your assets and will then run them.
