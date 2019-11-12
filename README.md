@@ -48,6 +48,8 @@ The config file is [Laravel Mix](https://laravel-mix.com/docs/4.0/installation) 
 For simple AdonisJS project you can use following configuration
 
 ```js
+const mix = require('laravel-mix')
+
 mix.setPublicPath('public')
 
 mix
