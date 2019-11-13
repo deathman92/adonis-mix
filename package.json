@@ -25,6 +25,6 @@
     "@adonisjs/fold": "^4.0.9"
   },
   "dependencies": {
-    "laravel-mix": "^4.0.14"
+    "laravel-mix": "^5.0.0"
   }
 }
