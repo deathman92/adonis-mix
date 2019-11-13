@@ -27,7 +27,7 @@ You are now ready to go!
 
 ## Bundle the assets
 
-On installation `adonis-mix` copies `webpack.mix.js` configuration file to the project's root folder. See See [Laravel Mix Documentation](https://laravel-mix.com/docs/4.0/installation) to how to setup your assets.
+On installation `adonis-mix` copies `webpack.mix.js` configuration file to the project's root folder. See [Laravel Mix Documentation](https://laravel-mix.com/docs/5.0/installation) on how to setup your assets.
 
 After creating your assets in the way you want (Less, SCSS, Stylus, ES2015, ...) you simply need to run the command below and the magic will happen.
 
@@ -37,11 +37,11 @@ $ adonis assets
 # adonis assets --production -> Minify for production
 ```
 
-Laravel Mix will automaticaly download packages you need to compiles your assets and will then run them.
+Laravel Mix will automatically download packages you need to compiles your assets and will then run them.
 
 ## Config
 
-The config file is [Laravel Mix](https://laravel-mix.com/docs/4.0/installation) `webpack.mix.js` file.
+The config file is [Laravel Mix](https://laravel-mix.com/docs/5.0/installation) `webpack.mix.js` file.
 
 ### Example configuration
 
@@ -61,7 +61,7 @@ Add these to `webpack.mix.js` file in project's root.
 
 ## Hot Module Replacement
 
-Read [Laravel Mix instructions](https://laravel-mix.com/docs/4.0/hot-module-replacement) about HMR.
+Read [Laravel Mix instructions](https://laravel-mix.com/docs/5.0/hot-module-replacement) about HMR.
 
 You can add script to your `package.json`
 
